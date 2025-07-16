@@ -1,0 +1,94 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #FFFBEA;
+  display: flex;
+  min-height: 100vh;
+}
+aside {
+  background: #FDE68A;
+  width: 250px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+aside h2 { margin-bottom: 30px; }
+.category {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+.category:hover { transform: scale(1.05); }
+.category span { margin-left: 10px; font-weight: 500; }
+.category.active {
+  background: #FEF3C7;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+main {
+  flex: 1;
+  padding: 30px;
+}
+main h2 { margin-bottom: 20px; }
+ul { list-style: none; }
+li {
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  animation: fadeIn 0.5s ease;
+}
+li.done .text {
+  text-decoration: line-through;
+  color: grey;
+}
+.text {
+  flex: 1;
+  margin: 0 15px;
+}
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+}
+.add-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #FBBF24;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: white;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+.add-btn:hover { transform: scale(1.1); }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+  body { flex-direction: column; }
+  aside { width: 100%; flex-direction: row; overflow-x: scroll; }
+  .category { flex: 1; margin: 0 5px; }
+}

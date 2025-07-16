@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cool Minimal To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <aside>
+    <h2>Hello 👋</h2>
+    <div class="category active" data-cat="Today">🌞 <span>Today</span></div>
+    <div class="category" data-cat="Planned">📅 <span>Planned</span></div>
+    <div class="category" data-cat="Personal">🧑 <span>Personal</span></div>
+    <div class="category" data-cat="Work">💼 <span>Work</span></div>
+    <div class="category" data-cat="Shopping">🛍️ <span>Shopping</span></div>
+  </aside>
+
+  <main>
+    <h2 id="currentCat">Today</h2>
+    <ul id="taskList"></ul>
+  </main>
+
+  <button class="add-btn" id="addBtn">+</button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
